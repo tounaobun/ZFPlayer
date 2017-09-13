@@ -1573,12 +1573,12 @@ typedef NS_ENUM(NSInteger, PanDirection){
                     NSLog(@"%zd",result);
                     if (result != AVAssetImageGeneratorSucceeded) {
                         dispatch_async(dispatch_get_main_queue(), ^{
-                            [controlView zf_playerDraggedTime:dragedSeconds sliderImage:self.thumbImg ? : ZFPlayerImage(@"ZFPlayer_loading_bgView")];
+                            [controlView zf_playerDraggedTime:dragedSeconds sliderImage:self.thumbImg ? : nil];
                         });
                     } else {
                         self.thumbImg = [UIImage imageWithCGImage:im];
                         dispatch_async(dispatch_get_main_queue(), ^{
-                            [controlView zf_playerDraggedTime:dragedSeconds sliderImage:self.thumbImg ? : ZFPlayerImage(@"ZFPlayer_loading_bgView")];
+                            [controlView zf_playerDraggedTime:dragedSeconds sliderImage:self.thumbImg ? : nil];
                         });
                     }
                 };

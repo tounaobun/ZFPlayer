@@ -27,7 +27,7 @@
 
 - (UIImage *)placeholderImage {
     if (!_placeholderImage) {
-        _placeholderImage = ZFPlayerImage(@"ZFPlayer_loading_bgView");
+        _placeholderImage = nil;
     }
     return _placeholderImage;
 }
